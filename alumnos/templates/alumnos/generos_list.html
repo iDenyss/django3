@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Géneros</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index">
+                <B>Shot-Star</B>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros">Acerca de nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="anime">Anime</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="formulario">Formulario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="crud">Personas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="crud_generos">Generos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
+     
+    <div class="container my-5">
+        <h1>Editar Géneros</h1>
+        <br>
+        <a href="{% url 'generosAdd' %}" class="btn btn-primary mb-3">Agregar</a>
+        <div id="idMensajes">
+            {% if mensajes %}
+                <div class="alert alert-success">{{ mensaje }}</div>
+            {% endif %}
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Género</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if generos %}
+                    {% for x in generos %}
+                        <tr>
+                            <td>{{ x.genero }}</td>
+                            <td>
+                                <a href="{% url 'generos_del' pk=x.id_genero %}" class="btn btn-danger btn-sm">Eliminar</a>
+                                <a href="{% url 'generos_edit' pk=x.id_genero %}" class="btn btn-primary btn-sm">Modificar</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#idMensajes").delay(2000).fadeOut("slow");
+        });
+    </script>
+
+            <!-- Start Footer -->
+            <footer class="bg-dark" id="tempaltemo_footer">
+                <div class="container">
+                    <div class="row">
+        
+                        <div class="col-md-4 pt-5">
+                            <h2 class="h2 text-success border-bottom pb-3 border-light logo">Shot Star</h2>
+                            <ul class="list-unstyled text-light footer-link-list">
+                                <li>
+                                    <i class="fas fa-map-marker-alt fa-fw"></i>
+                                    123 Consectetur at ligula 10660
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone fa-fw"></i>
+                                    <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope fa-fw"></i>
+                                    <a class="text-decoration-none" href="mailto:info@company.com">shotstar@company.com</a>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div class="col-md-4 pt-5">
+                            <h2 class="h2 text-light border-bottom pb-3 border-light">Animes Recomendados</h2>
+                            <ul class="list-unstyled text-light footer-link-list">
+                                <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/dragon-ball-z">Dragon ball Z</a></li>
+                                <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/one-piece-tv">One Piece</a></li>
+                                <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/jujutsu-kaisen-tv">Jujutsu Kaisen</a></li>
+                                <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/naruto">Naruto</a></li>
+                                <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/fullmetal-alchemist-brotherhood">FullMetal Alchemist Brotherhood</a></li>
+                                <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/kimetsu-no-yaiba">Demon Slayer</a></li>
+                                <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/shingeki-no-kyojin">Attack on Titan</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="col-md-4 pt-5">
+                            <h2 class="h2 text-light border-bottom pb-3 border-light">Paginas</h2>
+                            <ul class="list-unstyled text-light footer-link-list">
+                                <li><a class="text-decoration-none" href="index.html">Inicio</a></li>
+                                <li><a class="text-decoration-none" href="nosotros.html">Acerca de nosotros</a></li>
+                                <li><a class="text-decoration-none" href="anime.html">Anime</a></li>
+                                <li><a class="text-decoration-none" href="formulario.html">Formulario</a></li>
+                            </ul>
+                        </div>
+        
+                    </div>
+                </div>
+        
+            </footer>
+            <!-- End Footer -->
+        
+            <!-- Start Script -->
+            <script src="assets/js/jquery-1.11.0.min.js"></script>
+            <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+            <script src="assets/js/bootstrap.bundle.min.js"></script>
+            <script src="assets/js/templatemo.js"></script>
+            <script src="assets/js/custom.js"></script>
+            <!-- End Script -->
+</body>
+</html>

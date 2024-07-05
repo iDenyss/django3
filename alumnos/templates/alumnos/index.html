@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zay Shop eCommerce HTML CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <!-- Links para conectarse a BOOSTRAP ,CSS y mas -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index">
+                <B>Shot-Star</B>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros">Acerca de nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="anime">Anime</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="formulario">Formulario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="crud">Personas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="crud_generos">Generos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Start Banner Hero -->
+    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <a href="https://www3.animeflv.net/anime/pokemon"><img class="img-fluid" src="https://nintenduo.com/wp-content/uploads/2022/05/Pokemon-Home-Cambio-Ataques-01.webp" alt=""></a>
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left align-self-center">
+                                <h1 class="h1">Pokémon</h1>
+                                <p>
+                                    La serie de animé japonesa POKÉMON sigue las aventuras de Ash, sus amigos 
+                                    y su grupo de criaturas lindas y sumamente hábiles que luchan en torneos 
+                                    en su nombre. Ash viaja a través de tierras remotas y misteriosas y trabaja 
+                                    duro para convertirse en un experto entrenador Pokémon.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <a href="https://www3.animeflv.net/anime/dragon-ball-super"><img class="img-fluid" src="https://p325k7wa.twic.pics/high/dragon-ball/dragonball-project-z/00-page-setup/dbzk_game-thumbnail.jpg?twic=v1/step=10/quality=80/max=760" alt=""></a>
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left">
+                                <h1 class="h1">Dragon Ball Super</h1>
+                                Su trama describe las aventuras de Gokū, un guerrero saiyajin 
+                                experto en artes marciales, diez años después de la derrota 
+                                de Majin Boo. En su travesía pone a prueba y mejora sus 
+                                habilidades de pelea, enfrentando oponentes y protegiendo a la
+                                Tierra de los seres que quieren conquistarla y exterminar a la humanidad.
+                                <p>
+                                   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                          <a href="https://www3.animeflv.net/anime/naruto">  <img class="img-fluid" src="./assets/img/banner_img_03.jpg" alt=""></a>
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left">
+                                <h1 class="h1">Naruto</h1>
+                                
+                                <p>
+                                    Naruto es una serie de manga escrita e ilustrada por Masashi Kishimoto.
+                                    La obra narra la historia de un ninja adolescente llamado Naruto Uzumaki,
+                                    quien aspira a convertirse en Hokage, líder de su aldea, con el propósito 
+                                    de ser reconocido como alguien importante dentro de la aldea y entre sus compañeros.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+    <!-- End Banner Hero -->
+
+
+    <!-- Start Categories of The Month -->
+    <section class="container py-5">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Tres Grandes</h1>
+                <p>
+                    Los 'Tres Grandes' es el título que reciben los tres manganimes 
+                    que condujeron a la popularidad mundial del anime en la década 
+                    de 2000: Naruto, One Piece y Bleach.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="https://img.artpal.com/767462/14-22-12-22-21-32-32m.jpg" class="rounded-circle img-fluid border"></a>
+                <h5 class="text-center mt-3 mb-3">One Piece</h5>
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-success " data-toggle="modal" data-target="#exampleModal">
+    Descripcion
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">One Piece</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Creador: Eiichiro Oda <br>
+Fecha de Creación: La serie de manga comenzó a publicarse el 22 de julio de 1997. <br>
+Editorial: Shueisha <br>
+Revista: Weekly Shōnen Jump <br> <br>
+
+"One Piece" es una serie de manga y anime que sigue las aventuras de Monkey D. Luffy, un joven pirata con el poder de estirar su cuerpo como si fuera de goma después de comer una fruta del diablo. Inspirado por su ídolo de la infancia, el pirata "Red-Haired" Shanks, Luffy zarpa en un viaje épico para encontrar el "One Piece", el tesoro más grande del mundo, y convertirse en el Rey de los Piratas. 
+
+<br> <br>A lo largo de su travesía, Luffy forma una tripulación diversa y colorida conocida como los Piratas del Sombrero de Paja, que incluye personajes como el espadachín Roronoa Zoro, la navegante Nami, el francotirador Usopp, el cocinero Sanji, la reno-doctor Tony Tony Chopper, la arqueóloga Nico Robin, el carpintero cyborg Franky, el músico esqueleto Brook, y el tritón timonel Jinbe. 
+
+<br> <br> El mundo de "One Piece" está lleno de islas exóticas, criaturas fantásticas y numerosos piratas y marines con poderes extraordinarios, todos en búsqueda de sus propios sueños y objetivos. La serie es conocida por su narrativa emocionante, desarrollo de personajes profundo y elaboradas tramas entrelazadas, lo que la ha convertido en una de las franquicias de manga y anime más populares y longevas de la historia. <br><br>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="https://www3.animeflv.net/anime/one-piece-tv"><button type="button" class="btn btn-primary">Ver</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="https://img.artpal.com/767462/5-22-12-19-11-20-39m.jpg" class="rounded-circle img-fluid border"></a>
+                <h2 class="h5 text-center mt-3 mb-3">Naruto</h2>
+                        <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal2">
+                Descripcion
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Naruto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                    <p>
+                        Creador: Masashi Kishimoto
+            <br>Fecha de Creación: La serie de manga comenzó a publicarse el 21 de septiembre de 1999.
+            <br>Editorial: Shueisha
+            <br>Revista: Weekly Shōnen Jump
+            <br>Breve Sinopsis
+
+            <br> <br> "Naruto" es una serie de manga y anime que sigue la historia de Naruto Uzumaki, un joven ninja con el sueño de convertirse en Hokage, el líder de su aldea, para ganarse el respeto y el reconocimiento de sus compañeros. Desde su nacimiento, Naruto ha sido portador del Zorro de Nueve Colas (Kyūbi), una poderosa bestia que una vez atacó su aldea, la Aldea Oculta de la Hoja (Konoha).
+
+            <br> <br> A lo largo de la serie, Naruto se entrena arduamente y participa en numerosas misiones junto a sus amigos y compañeros de equipo, como Sasuke Uchiha y Sakura Haruno, bajo la tutela de su mentor Kakashi Hatake. Enfrentan diversas amenazas y villanos, incluyendo la peligrosa organización Akatsuki, que busca capturar a todas las bestias con cola, como el Zorro de Nueve Colas de Naruto.
+
+            <br> <br> La serie se divide en dos partes principales: "Naruto", que sigue la infancia y los primeros años de entrenamiento de Naruto, y "Naruto Shippuden", que continúa con Naruto como adolescente, enfrentando desafíos más grandes y peligrosos mientras se acerca a su objetivo de convertirse en Hokage. A través de su determinación, coraje y el poder de la amistad, Naruto lucha no solo por su sueño, sino también por la paz y el entendimiento en su mundo ninja.
+
+            <br> <br> "Naruto" es conocido por sus emocionantes escenas de batalla, el desarrollo profundo de personajes y temas de superación personal y la importancia de las relaciones y el trabajo en equipo. La serie ha alcanzado una enorme popularidad global y ha dejado una marca significativa en la cultura del manga y anime.
+                    </p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a href="https://www3.animeflv.net/anime/naruto"><button type="button" class="btn btn-primary">Ver</button></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="https://image.spreadshirtmedia.com/image-server/v1/compositions/T812A1PA4267PT17X19Y93D12384436W30802H25771/views/1,width=650,height=650,appearanceId=1.jpg" class="rounded-circle img-fluid border"></a>
+                <h2 class="h5 text-center mt-3 mb-3">Bleach</h2>
+                
+                 <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal3">
+                Descripcion
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Bleach</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                    <p>
+                        Creador: Tite Kubo
+                        <br>Fecha de Creación: La serie de manga comenzó a publicarse el 7 de agosto de 2001.
+                        <br>Editorial: Shueisha
+                        <br>Revista: Weekly Shōnen Jump
+                        <br>Breve Sinopsis
+
+                        <br><br>"Bleach" es una serie de manga y anime que sigue las aventuras de Ichigo Kurosaki, un adolescente que accidentalmente adquiere los poderes de un Shinigami (Dios de la Muerte) de una Shinigami llamada Rukia Kuchiki. Con estos nuevos poderes, Ichigo se ve obligado a asumir las responsabilidades de un Shinigami: proteger a los vivos de los Hollow, espíritus malignos que devoran almas, y guiar a las almas perdidas a la Sociedad de Almas (Soul Society).
+
+                        <br><br>A medida que la historia avanza, Ichigo se encuentra envuelto en una serie de conflictos cada vez más intensos y peligrosos. Desde enfrentar a los traicioneros Shinigami en la Sociedad de Almas hasta combatir a los poderosos Arrancar y los enigmáticos Espada, liderados por el ex capitán de la Sociedad de Almas, Sōsuke Aizen, quien busca obtener el poder supremo para controlar el mundo de los vivos y los muertos.
+
+                        <br><br>Ichigo es apoyado por un grupo diverso de amigos y aliados, incluidos sus compañeros de clase y otros Shinigami. Entre ellos se encuentran Orihime Inoue, quien tiene poderes curativos únicos; Uryū Ishida, un Quincy con habilidades arqueras; Yasutora "Chad" Sado, con su fuerza sobrehumana; y los capitanes y tenientes de la Sociedad de Almas, cada uno con habilidades y zanpakutō (espadas espirituales) únicos.
+
+                        <br><br>La serie explora temas de vida y muerte, el deber y el sacrificio, y la lucha entre el bien y el mal, todo ello con una rica mitología y un elenco de personajes complejos. "Bleach" ha sido aclamada por sus intensas escenas de combate, su arte detallado y su narrativa emocionante, convirtiéndose en una de las series más populares y reconocidas dentro del género shōnen.
+                    </p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a href="https://www3.animeflv.net/anime/bleach-tv"><button type="button" class="btn btn-primary">Ver</button></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Categories of The Month -->
+
+
+    <!-- Start Featured Product -->
+    <section class="bg-light">
+        <div class="container py-5">
+            <div class="row text-center py-3">
+                <div class="col-lg-6 m-auto">
+                    <h1 class="h1">Tienda</h1>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <a href="shop-single">
+                            <img src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/117113100_01/w=800,h=800,fit=pad" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                </li>
+                                <li class="text-muted text-right">$24.990</li>
+                            </ul>
+                            <a href="shop-single" class="h2 text-decoration-none text-dark">Peluche Pochita </a>
+                            <p class="card-text">
+                                Hermosos Peluche de los personajes, pochita del anime Chainsaw Man. Tamaño de 25 centimetros aprox.
+                            </p>
+                            <p class="text-muted">Reviews (74)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <a href="shop-single2">
+                            <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/0/0e/Volume_1.png/revision/latest?cb=20200905220554&path-prefix=es" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                </li>
+                                <li class="text-muted text-right">$16.780</li>
+                            </ul>
+                            <a href="shop-single2" class="h2 text-decoration-none text-dark">Jujutsu Kaisen, Vol. 1</a>
+                            <p class="card-text">
+                                Manga Jujutsu Kaisen de tapa blanda, Vol. 1
+                            </p>
+                            <p class="text-muted">Reviews (120)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <a href="shop-single3">
+                            <img src="https://tienda.richirocko.com/wp-content/uploads/2023/10/FIGURE-160851_04.jpeg" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                </li>
+                                <li class="text-muted text-right">$630.050</li>
+                            </ul>
+                            <a href="shop-single3" class="h2 text-decoration-none text-dark">Fushiguro Toji</a>
+                            <p class="card-text">
+                                Fushiguro Toji GK estatua de resina de edición limitada, modelo de figura
+                            </p>
+                            <p class="text-muted">Reviews (320)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Featured Product -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- End Script -->
+
+     <!-- Start Footer -->
+     <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">Shot Star</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            123 Consectetur at ligula 10660
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a class="text-decoration-none" href="mailto:info@company.com">shotstar@company.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Animes Recomendados</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/dragon-ball-z">Dragon ball Z</a></li>
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/one-piece-tv">One Piece</a></li>
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/jujutsu-kaisen-tv">Jujutsu Kaisen</a></li>
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/naruto">Naruto</a></li>
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/fullmetal-alchemist-brotherhood">FullMetal Alchemist Brotherhood</a></li>
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/kimetsu-no-yaiba">Demon Slayer</a></li>
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/shingeki-no-kyojin">Attack on Titan</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Paginas</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="index.html">Inicio</a></li>
+                        <li><a class="text-decoration-none" href="nosotros.html">Acerca de nosotros</a></li>
+                        <li><a class="text-decoration-none" href="anime.html">Anime</a></li>
+                        <li><a class="text-decoration-none" href="formulario.html">Formulario</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- End Script -->
+</body>
+
+</html>

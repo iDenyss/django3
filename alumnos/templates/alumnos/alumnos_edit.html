@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario para Actualizar Alumnos</title>
+
+    <!-- Links para conectarse a BOOSTRAP, CSS y más -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index">
+                <B>Shot-Star</B>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros">Acerca de nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="anime">Anime</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="formulario">Formulario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="crud">Personas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="crud_generos">Generos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <div class="container mt-5">
+        {% if alumno %}
+            <h2 class="mb-4 text-center">Formulario para Actualizar Alumnos</h2>
+            <form action="{% url 'alumnosUpdate' %}" method="POST" class="mx-auto" style="max-width: 600px;">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="rut">Rut</label>
+                    <input type="text" class="form-control" name="rut" id="rut" value="{{ alumno.rut }}">
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" value="{{ alumno.nombre }}">
+                </div>
+                <div class="form-group">
+                    <label for="paterno">Apellido Paterno</label>
+                    <input type="text" class="form-control" name="paterno" id="paterno" value="{{ alumno.apellido_paterno }}">
+                </div>
+                <div class="form-group">
+                    <label for="materno">Apellido Materno</label>
+                    <input type="text" class="form-control" name="materno" id="materno" value="{{ alumno.apellido_materno }}">
+                </div>
+                <div class="form-group">
+                    <label for="fechaNac">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" name="fechaNac" id="fechaNac" value="{{ alumno.fecha_nacimiento|date:'Y-m-d' }}">
+                </div>
+                <div class="form-group">
+                    <label for="genero">Género</label>
+                    <select name="genero" id="genero" class="form-control">
+                        {% for genero in generos %}
+                            <option value="{{ genero.id_genero }}" {% if genero.genero == alumno.id_genero.genero %}selected{% endif %}>{{ genero.genero }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Celular</label>
+                    <input type="text" class="form-control" name="telefono" id="telefono" value="{{ alumno.telefono }}">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" value="{{ alumno.email }}">
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" class="form-control" name="direccion" id="direccion" value="{{ alumno.direccion }}">
+                </div>
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+            </form>
+            <br><br>
+        {% endif %}
+
+        <div id="idMensajes" class="alert alert-info">
+            {% if mensaje %}
+                {{ mensaje }}
+            {% endif %}
+        </div>
+
+        <br><br>
+        <a href="{% url 'crud' %}" class="btn btn-secondary">Volver</a>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            $("#idMensajes").delay(2000).fadeOut("slow");
+        });
+    </script>
+
+     <!-- Start Footer -->
+     <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">Shot Star</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            123 Consectetur at ligula 10660
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a class="text-decoration-none" href="mailto:info@company.com">shotstar@company.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Animes Recomendados</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/dragon-ball-z">Dragon ball Z</a></li>
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/one-piece-tv">One Piece</a></li>
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/jujutsu-kaisen-tv">Jujutsu Kaisen</a></li>
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/naruto">Naruto</a></li>
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/fullmetal-alchemist-brotherhood">FullMetal Alchemist Brotherhood</a></li>
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/kimetsu-no-yaiba">Demon Slayer</a></li>
+                        <li><a class="text-decoration-none" href="https://www3.animeflv.net/anime/shingeki-no-kyojin">Attack on Titan</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Paginas</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="index.html">Inicio</a></li>
+                        <li><a class="text-decoration-none" href="nosotros.html">Acerca de nosotros</a></li>
+                        <li><a class="text-decoration-none" href="anime.html">Anime</a></li>
+                        <li><a class="text-decoration-none" href="formulario.html">Formulario</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- End Script -->
+</body>
+</html>
